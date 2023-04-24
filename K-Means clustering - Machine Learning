@@ -2,9 +2,8 @@
 # In a new file, copy-paste the following code and run it. Pls wait a few seconds to get the output.
 
 # Problem description: K-Means Machine Learning algorithm. 
-# It is applied for partitioning / segmentation cases into mutually exclusive groups (clusters), 
-# for finding groups with similar features.
-# Cases in each cluster have similar characteristics, based on the chosen features.
+# It is applied for partitioning / segmentation cases into mutually exclusive groups (clusters).
+# Cases in each cluster (groups) have similar characteristics (features).
 
 
 import pandas as pd
@@ -41,8 +40,8 @@ print(X[0:5])
 
 # Normalize the data. Data Standardization with zero mean and unit variance.
 from sklearn import preprocessing
-X=preprocessing.StandardScaler().fit(X).transform(X.astype(float))
-print(X[0:5])
+X_norm = preprocessing.StandardScaler().fit(X).transform(X.astype(float))
+print(X_norm[0:5])
 
 # Modeling
 from sklearn.cluster import KMeans
@@ -50,7 +49,7 @@ from sklearn.cluster import KMeans
 clusterNum = 3  # assigning number of clusters
 
 k_means = KMeans (init = 'k-means++', n_clusters = clusterNum, n_init= 12)
-k_means.fit(X)
+k_means.fit(X_norm)
 labels = k_means.labels_   # Save labels 
 print('labels for each point in the model', labels)
 
@@ -58,3 +57,4 @@ print('labels for each point in the model', labels)
 plt.scatter(X[: , 2], X[: , 3], 200, labels,  alpha = 0.5)
 plt.xlabel ('petal_length')
 plt.ylabel ('petal_width')
+
