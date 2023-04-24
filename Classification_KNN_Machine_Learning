@@ -3,7 +3,7 @@
 # In a new file, copy-paste the following code and run it. Pls wait a few seconds to get the output.
 
 # Problem description: K-Nearest Neighbours supervised Machine Learning algorithm. 
-# It is applied for prediction to which class a data point (data set array) belongs. 
+# It is applied for prediction to which class a data point belongs. 
 # This is done, based on comparison to majority of similar data points that belong to a class. 
 # There are number of classes that contain similar to each other data points. 
 # Number of classes is defined upfront, by number ‘k’.
@@ -14,21 +14,21 @@ import matplotlib.pyplot as plt
 from sklearn import preprocessing
 %matplotlib inline
 
-# source data set
+# Source data set
 csv_path = 'data/iris.csv'
 df = pd.read_csv(csv_path)
 print(df.head())
 print(df.tail())
 
-#get statistics of data frame
+# Get statistics of data frame
 print(df.describe())
 
-#Find unique species names
+# Find unique species names
 print('unique species:')
 n = df['species'].unique()
 print(n)
 
-# replacing values
+# Replacing values
 df['species'].replace(['se', 'setosa','versicolor','virginica'],
                       [0, 1, 2, 3], inplace=True)
 print('after replacement:')
