@@ -1,3 +1,6 @@
+# Open https://jupyter.org/try-jupyter/lab/ using Google Chrome. Open Notebook with Python.
+# In a new file, copy-paste the following code and run it. Pls wait a few seconds to get the output.
+
 # This is K-Nearest Neighbours supervised learning algorithm. 
 # It is applied for prediction to which class a data point belongs. 
 # This is done, based on comparison to majority of similar data points that belong to a class. 
