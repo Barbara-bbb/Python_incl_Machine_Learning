@@ -1,0 +1,60 @@
+# Open https://jupyter.org/try-jupyter/lab/ using Google Chrome. Open Notebook with Python.
+# In a new file, copy-paste the following code and run it. Pls wait a few seconds to get the output.
+
+# Problem description: K-Means Machine Learning algorithm. 
+# It is applied for partitioning / segmentation cases into mutually exclusive groups (clusters), 
+# for finding groups with similar features.
+# Cases in each cluster have similar characteristics, based on the chosen features.
+
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn import preprocessing
+%matplotlib inline
+
+# Source data set
+csv_path = 'data/iris.csv'
+df = pd.read_csv(csv_path)
+print(df.head())
+print(df.tail())
+
+# Get statistics of data frame
+print(df.describe())
+
+# Find unique species names
+print('unique species:')
+n = df['species'].unique()
+print(n)
+
+# Replacing values
+df['species'].replace(['se', 'setosa','versicolor','virginica'],
+                      [0, 1, 2, 3], inplace=True)
+print('after replacement:')
+print(df.head())
+
+# Defining feature data set / feature matrix, X. 
+# Converting Pandas data frame to Numpy array to use library sckit-learn
+
+X = df[['sepal_length','sepal_width','petal_length','petal_width','species']].values.astype(float)
+print(X[0:5])
+
+# Normalize the data. Data Standardization with zero mean and unit variance.
+from sklearn import preprocessing
+X=preprocessing.StandardScaler().fit(X).transform(X.astype(float))
+print(X[0:5])
+
+# Modeling
+from sklearn.cluster import KMeans
+
+clusterNum = 3  # assigning number of clusters
+
+k_means = KMeans (init = 'k-means++', n_clusters = clusterNum, n_init= 12)
+k_means.fit(X)
+labels = k_means.labels_   # Save labels 
+print('labels for each point in the model', labels)
+
+#Chosen Features plotting with defined number of clusters
+plt.scatter(X[: , 2], X[: , 3], 200, labels,  alpha = 0.5)
+plt.xlabel ('petal_length')
+plt.ylabel ('petal_width')
