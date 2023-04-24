@@ -3,7 +3,7 @@
 
 # Problem description: K-Means Machine Learning algorithm. 
 # It is applied for partitioning / segmentation cases into mutually exclusive groups (clusters).
-# Cases in each cluster (groups) have similar characteristics (features).
+# Cases in each cluster (group) have similar characteristics (features).
 
 
 import pandas as pd
