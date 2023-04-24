@@ -3,7 +3,7 @@
 # In a new file, copy-paste the following code and run it. Pls wait a few seconds to get the output.
 
 # Problem description: K-Nearest Neighbours supervised Machine Learning algorithm. 
-# It is applied for prediction to which class a data point belongs. 
+# It is applied for prediction to which class a data point (dataset array) belongs. 
 # This is done, based on comparison to majority of similar data points that belong to a class. 
 # There are number of classes that contain similar to each other data points. 
 # Number of classes is defined upfront, by number ‘k’.
