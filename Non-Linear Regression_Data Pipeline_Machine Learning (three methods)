@@ -87,7 +87,7 @@ Input = [('scale', StandardScaler()),('polynomial', PolynomialFeatures(degree = 
 pipe = Pipeline(Input)
 pipe
 
-# Conver Numpy to Pandas data frame
+# Convert Numpy to Pandas data frame. Pandas data frame are used for the Pipeline.
 x = pd.DataFrame(x)
 Z = x
 y_data = pd.DataFrame(y_data)
