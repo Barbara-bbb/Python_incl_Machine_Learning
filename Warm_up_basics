@@ -17,7 +17,7 @@ print('mean:', mean)
 b=np.array([[0,1,2,3,4],[2,2,2,2,2]])
 print('b:',b)
 
-# Cast ditionary to Pandas data frame
+# Cast dictionary to Pandas data frame
 dictionary={'Adventure': (110,103), 'Psychology':(105,101)}
 print(dictionary)
 s=dictionary['Adventure']
