@@ -33,38 +33,56 @@ print('after replacement:')
 print(df.head())
 
 # Defining feature data set / feature matrix, X. 
-# Converting Pandas data frame to Numpy array to use library sckit-learn
-
+# Converting Pandas data frame to Numpy array to use library sckit-learn (series of data sets values create an array)
 X = df[['sepal_length','sepal_width','petal_length','petal_width','species']].values.astype(float)
 print(X[0:5])
 print(X.shape)
 print('X type:',type(X))
 
+# I. 
 # Normalize the data. Data Standardization with zero mean and unit variance.
 from sklearn import preprocessing
 X_norm = preprocessing.StandardScaler().fit(X).transform(X.astype(float))
 print(X_norm[0:5])
 
-# Modeling
+# Modeling on normalized data
 from sklearn.cluster import KMeans
-
 clusterNum = 3  # assigning number of clusters
-
 k_means = KMeans (init = 'k-means++', n_clusters = clusterNum, n_init= 12)
 k_means.fit(X_norm)
-labels = k_means.labels_   # Save labels 
-print('labels for each point in the model', labels)
-print(labels.shape)
-print(type(labels))
+labels_norm = k_means.labels_   # Save labels 
+print('labels for each point in the model', labels_norm)
+print(labels_norm.shape)
+print(type(labels_norm))
 
 # Add column 'labels' to Features data set, first convert 'labels' to Pandas data frame
-labels_pd = pd.DataFrame(labels, columns = ['KMeans_labels'])
+labels_pd = pd.DataFrame(labels_norm, columns = ['KMeans_labels'])
 # Adding new column Labels to df with column location = 5
 df.insert (loc=5, column = 'KMeans_labels', value = labels_pd)  
 print('data frame with KMeans labels:')
 print(df[0:5])
 
 #Chosen Features plotting with defined number of clusters
-plt.scatter(X[: , 2], X[: , 3], 200, labels,  alpha = 0.5)
+plt.figure(1)
+plt.scatter(X_norm[: , 2], X_norm[: , 3], 200, labels_norm,  alpha = 0.5)
+plt.title ('K-means clustering on normalized data')
+plt.xlabel ('petal_length')
+plt.ylabel ('petal_width')
+
+# II.
+# Modeling on non-normalized data
+from sklearn.cluster import KMeans
+clusterNum = 3  # assigning number of clusters
+k_means = KMeans (init = 'k-means++', n_clusters = clusterNum, n_init= 12)
+k_means.fit(X)
+labels_non_norm = k_means.labels_   # Save labels 
+print('labels for each point in the model', labels_non_norm)
+print(labels_non_norm.shape)
+print(type(labels_non_norm))
+
+#Chosen Features plotting with defined number of clusters
+plt.figure(2)
+plt.scatter(X[: , 2], X[: , 3], 200, labels_non_norm,  alpha = 0.5)
+plt.title ('K-means clustering on non-normalized data')
 plt.xlabel ('petal_length')
 plt.ylabel ('petal_width')
