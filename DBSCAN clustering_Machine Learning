@@ -1,0 +1,41 @@
+# Open https://jupyter.org/try-jupyter/lab/ using Google Chrome. Open Notebook with Python.
+# In a new file, copy-paste the following code and run it. Pls wait a few seconds to get the output.
+
+# Problem description: DBSCAN clustering for clusters definition and noise (outliers) detection
+
+import numpy as np
+import pandas as pd
+from sklearn.cluster import DBSCAN
+from sklearn.preprocessing import StandardScaler
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+# Source data set
+csv_path = 'data/iris.csv'
+df = pd.read_csv(csv_path)
+print(df.head())
+print(df.tail())
+
+# Defining feature data set / feature matrix, X. 
+# Converting Pandas data frame to Numpy array to use library sckit-learn
+
+X = df[['sepal_width','petal_width']].values.astype(float)
+print(X[0:5])
+print(X.shape)
+print('X type:',type(X))
+
+# Normalize the data. Data Standardization with zero mean and unit variance (Z-score).
+from sklearn import preprocessing
+X_norm = preprocessing.StandardScaler().fit(X).transform(X.astype(float))
+print(X_norm[0:5])
+
+plt.scatter(X_norm[:,0],X_norm[:,1])
+
+# DBSCAN Modeling
+epsilon = 0.5
+minSamples = 20
+db = DBSCAN (eps = epsilon, min_samples = minSamples).fit(X)
+labels = db.labels_
+labels
+
+
