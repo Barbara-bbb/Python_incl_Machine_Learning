@@ -38,5 +38,5 @@ db = DBSCAN (eps = epsilon, min_samples = minSamples).fit(X)
 labels = db.labels_
 labels
 
-# Plotting with defined number of clusters
+# Plotting with detected number of standard clusters and noise cluster
 plt.scatter(X_norm[: , 0], X_norm[: , 1], 200, labels,  alpha = 0.5)
