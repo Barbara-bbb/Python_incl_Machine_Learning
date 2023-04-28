@@ -1,7 +1,7 @@
 # Open https://jupyter.org/try-jupyter/lab/ using Google Chrome. Open Notebook with Python.
 # In a new file, copy-paste the following code and run it. Pls wait a few seconds to get the output.
 
-# Problem description: DBSCAN clustering with noise (outliers) detection.
+# Problem description: DBSCAN clustering with noise (outliers) detection. 
 
 import numpy as np
 import pandas as pd
@@ -25,20 +25,37 @@ print('X type:',type(X))
 
 plt.figure(1)
 plt.scatter(X[:,0], X[:,1])
+plt.title('Non-normalized data')
 
-# Normalize the data. Data Standardization with zero mean and unit variance (Z-score).
-# from sklearn.preprocessing import StandardScaler
-# X_norm = preprocessing.StandardScaler().fit(X).transform(X.astype(float))
-# print(X_norm[0:5])
-
-# DBSCAN Modeling
+# I. DBSCAN Modeling - non-normalized data
 epsilon = 0.5
 minSamples = 25
 db = DBSCAN (eps = epsilon, min_samples = minSamples).fit(X)
-labels = db.labels_
-labels
+labels_non_norm = db.labels_
+labels_non_norm
 
-# Plotting with detected number of standard clusters and noise cluster
+# Plotting with detected number of standard clusters and noise cluster - non-normalized data
 plt.figure(2)
-plt.scatter(X[: , 0], X[: , 1], 50, labels,  alpha = 0.5)
+plt.scatter(X[: , 0], X[: , 1], 50, labels_non_norm,  alpha = 0.5)
+plt.title('DBSCAN on non-normalized data')
 
+# II. Normalize the data. Data Standardization with zero mean and unit variance (Z-score).
+from sklearn.preprocessing import StandardScaler
+X_norm = preprocessing.StandardScaler().fit(X).transform(X.astype(float))
+print(X_norm[0:5])
+
+plt.figure(3)
+plt.scatter(X_norm[:,0], X_norm[:,1])
+plt.title('Normalized data')
+
+# DBSCAN Modeling - normalized data
+epsilon = 0.5
+minSamples = 25
+db2 = DBSCAN (eps = epsilon, min_samples = minSamples).fit(X_norm)
+labels_norm = db2.labels_
+labels_norm
+
+# Plotting with detected number of standard clusters and noise cluster - non-normalized data
+plt.figure(4)
+plt.scatter(X_norm[: , 0], X_norm[: , 1], 50, labels_norm,  alpha = 0.5)
+plt.title('DBSCAN on normalized data')
