@@ -75,6 +75,9 @@ print('y_test_predicted head:', yhat[0:15])
 
 # Evaluation of accuracy in terms of actual and predicted values
 print('')
+print('')
+print('EVALUATION OF ACCURACY')
+print('')
 from sklearn import metrics
 print('Accuracy of the Train data set:', metrics.accuracy_score(y_train, neigh.predict(X_train)))
 print('Accuracy of the Test data set:', metrics.accuracy_score(y_test, yhat))
