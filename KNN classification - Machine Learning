@@ -6,6 +6,9 @@
 # This is done, based on comparison to majority of similar data points that belong to a class. 
 # There are number of classes that contain similar to each other data points. 
 # Number of classes is defined upfront, by number ‘k’.
+# Accuracy definition by two methods (from the sklearn package): 
+# 1) accuracy_score function and 2) confusion_matrix / F1 score.
+
 
 import pandas as pd
 import numpy as np
@@ -71,6 +74,31 @@ yhat = neigh.predict(X_test)
 print('y_test_predicted head:', yhat[0:15])
 
 # Evaluation of accuracy in terms of actual and predicted values
+print('')
 from sklearn import metrics
 print('Accuracy of the Train data set:', metrics.accuracy_score(y_train, neigh.predict(X_train)))
 print('Accuracy of the Test data set:', metrics.accuracy_score(y_test, yhat))
+
+print('')
+# Accuracy with the confusion matrix:
+from sklearn.metrics import confusion_matrix, classification_report
+cnf_matrix = confusion_matrix (y_test, yhat,labels=[0,1,2,3])
+print('1. Test and pedicted accuracy using confusion matrix, for classes 0,1,2,3:')
+print('Test population is 30 points = 20% out of 150')
+print (cnf_matrix)
+print('Comment: no class 0 in the test sample')
+print('Classification report:')
+print(classification_report(y_test, yhat))
+
+print('y_test:', y_test)
+
+print('')
+cnf_matrix2 = confusion_matrix (y_train, neigh.predict(X_train),labels=[0,1,2,3])
+print('2. Train and pedicted accuracy using confusion matrix, for classes 0,1,2,3:')
+print('Train population is 120 points = 80% out of 150')
+print(cnf_matrix2)
+print('Classification report:')
+print(classification_report(y_train, neigh.predict(X_train)))
+print('Explanation of the UndefinedMetricWarning warning: only one sample of class 0 in the train sample; no predicted class 0.')
+print('y_train', y_train)
+print('y_train_predicted',neigh.predict(X_train))
