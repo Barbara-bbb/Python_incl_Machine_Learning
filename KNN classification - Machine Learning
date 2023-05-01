@@ -7,7 +7,7 @@
 # There are number of classes that contain similar to each other data points. 
 # Number of classes is defined upfront, by number ‘k’.
 # Accuracy definition by two methods (from the sklearn package): 
-# 1) accuracy_score function and 2) confusion_matrix / F1 score.
+# 1) accuracy_score and 2) confusion_matrix / F1 score functions.
 
 
 import pandas as pd
