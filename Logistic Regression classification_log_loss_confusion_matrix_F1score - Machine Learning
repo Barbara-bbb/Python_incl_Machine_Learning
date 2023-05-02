@@ -77,7 +77,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import confusion_matrix
 
 # Model training, solvers of choice are: 'liblinear','newton-cg', 'lbfgs','sag','saga'. 
-LR = LogisticRegression (C=0.01, solver ='liblinear').fit(X_train, y_train)
+LR = LogisticRegression (C=0.01, solver ='newton-cg').fit(X_train, y_train)
 LR
 # Prediction
 yhat = LR.predict(X_test)
