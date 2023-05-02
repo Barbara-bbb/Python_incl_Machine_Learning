@@ -12,6 +12,7 @@
 # 1) confusion_matrix / F1 score and 2) log loss (Logarithmic loss).
 
 # Log loss measures performance of a classifier with a chosen solver, where the predicted probability output is between 0 and 1.
+# Logistic Regression  solvers of choice for model training are: 'liblinear','newton-cg', 'lbfgs','sag','saga'. 
 
 # C is the parameter that indicates inverse of regularization strength (positive float).
 # Smaller C value specify stronger regularization.
