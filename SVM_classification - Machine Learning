@@ -59,8 +59,8 @@ print('Testing data set:', X_test.shape, y_test.shape)
 
 print('X_train head:', X_train[0:5])
 print('y_train head:',y_train[0:5])
-print('X_test head:', X_test[0:15])
-print('y_test head:',y_test[0:15])
+print('X_test head:', X_test[0:5])
+print('y_test head:',y_test[0:5])
 
 # Modeling by the SVM
 from sklearn import svm
