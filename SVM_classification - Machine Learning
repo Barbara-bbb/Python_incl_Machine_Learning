@@ -85,4 +85,23 @@ print('y_test:', y_test)
 from sklearn.metrics import f1_score
 f1_score(y_test , yhat , average ='weighted')
 
+# 3D plot: 
+from mpl_toolkits import mplot3d
+%matplotlib inline
+import numpy as np
+import matplotlib.pyplot as plt
+
+fig = plt.figure()
+ax = plt.axes(projection='3d')
+
+# Data for three-dimensional scattered points
+xdata = X[:,0]
+ydata = X[:,1]
+zdata = y
+ax.scatter3D(xdata, ydata, zdata, c=zdata);
+
+ax.set_xlabel('sepal_length')
+ax.set_ylabel('sepal_width')
+ax.set_zlabel('species')
+
 
