@@ -3,6 +3,8 @@
 
 # Problem description: K-Nearest Neighbours supervised Machine Learning algorithm. 
 # It is applied for prediction to which class a data point (data set array) belongs. 
+import pandas as pd
+import numpy as np
 # This is done, based on comparison to majority of similar data points that belong to a class. 
 # There are number of classes that contain similar to each other data points. 
 # Number of classes is defined upfront, by number ‘k’.
@@ -10,8 +12,6 @@
 # 1) accuracy_score and 2) confusion_matrix / F1 score functions.
 
 
-import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 %matplotlib inline
 
@@ -121,7 +121,7 @@ xdata = X_test[:,0]
 ydata = X_test[:,1]
 zdata = y_test
 ax1.scatter3D(xdata, ydata, zdata, c=zdata);
-ax1.set_title ('Test dataset')
+ax1.set_title ('Test dataset - Feature 1 & 2')
 ax1.set_xlabel('sepal_length')
 ax1.set_ylabel('sepal_width')
 ax1.set_zlabel('species')
@@ -134,8 +134,33 @@ xdata = X_test[:,0]
 ydata = X_test[:,1]
 zdata = yhat
 ax2.scatter3D(xdata, ydata, zdata, c=zdata);
-ax2.set_title ('Predicted test dataset')
+ax2.set_title ('Predicted test dataset - Feature 1 & 2')
 ax2.set_xlabel('sepal_length')
 ax2.set_ylabel('sepal_width')
 ax2.set_zlabel('species')
 
+#
+fig3 = plt.figure(3)
+ax3 = plt.axes(projection='3d')
+# Data for three-dimensional scattered points
+xdata = X_test[:,2]
+ydata = X_test[:,3]
+zdata = y_test
+ax3.scatter3D(xdata, ydata, zdata, c=zdata);
+ax3.set_title ('Test dataset - Feature 3 & 4')
+ax3.set_xlabel('petal_length')
+ax3.set_ylabel('petal_width')
+ax3.set_zlabel('species')
+#
+
+fig4 = plt.figure(4)
+ax4 = plt.axes(projection='3d')
+# Data for three-dimensional scattered points
+xdata = X_test[:,2]
+ydata = X_test[:,3]
+zdata = yhat
+ax4.scatter3D(xdata, ydata, zdata, c=zdata);
+ax4.set_title ('Predicted test dataset - Feature 3 & 4')
+ax4.set_xlabel('petal_length')
+ax4.set_ylabel('petal_width')
+ax4.set_zlabel('species')
