@@ -14,16 +14,35 @@ import numpy as np
 import matplotlib.pyplot as plt
 %matplotlib inline
 
+# Introduction
+print('____________________________________________________________________________________________')
+print('')
+print('Problem description: Using the Support Vector Machine (SVM) model for classification.')
+print('')
+print('It classifies cases by finding a separator, like a hyperplane or margin that that')
+print('separates two classes.')
+print('')
+print('Kernelling is mapping data into a higher dimensional space. ')
+print('Kernelling functions of choice are: Linear, Polynomial, Radial basis function RBF, Sigmoid.')
+print('')
+print('Accuracy evaluation by confusion_matrix / F1 score. 3D plotting is used for visualization.')
+print('')
+print('____________________________________________________________________________________________')
+
 # Source data set
 csv_path = 'data/iris.csv'
 df = pd.read_csv(csv_path)
+print('')
 print(df.head())
+print('')
 print(df.tail())
 
 # Get statistics of data frame
+print('')
 print(df.describe())
 
 # Find unique species names
+print('')
 print('unique species:')
 n = df['species'].unique()
 print(n)
@@ -31,6 +50,7 @@ print(n)
 # Replacing values
 df['species'].replace(['se', 'setosa','versicolor','virginica'],
                       [0, 1, 2, 3], inplace=True)
+print('')
 print('after replacement:')
 print(df.head())
 
@@ -38,12 +58,15 @@ print(df.head())
 # Converting Pandas data frame to Numpy array to use library sckit-learn
 
 X = df[['sepal_length','sepal_width','petal_length','petal_width']].values.astype(float)
+print('')
 print(X[0:5])
+print('')
 print('type of X:')
 print(type(X))
 
 # Labels data
 y = df['species'].values
+print('')
 print(y[0:5])
 
 # Normalize the data. Data Standardization with zero mean and unit variance.
@@ -54,12 +77,17 @@ print(y[0:5])
 # Train-test split
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=4)
+print('')
 print('Training data set:', X_train.shape, y_train.shape)
+print('')
 print('Testing data set:', X_test.shape, y_test.shape)
-
+print('')
 print('X_train head:', X_train[0:5])
+print('')
 print('y_train head:',y_train[0:5])
+print('')
 print('X_test head:', X_test[0:5])
+print('')
 print('y_test head:',y_test[0:5])
 
 # Modeling by the SVM
@@ -69,9 +97,9 @@ svm_model.fit(X_train, y_train)
 
 # Prediction
 yhat = svm_model.predict(X_test)
+print('')
 yhat [0:5]
 
-print('')
 # Accuracy with confusion matrix:
 from sklearn.metrics import confusion_matrix, classification_report
 cnf_matrix = confusion_matrix (y_test, yhat, labels=[0,1,2,3])
@@ -79,12 +107,15 @@ print('Test and pedicted accuracy using confusion matrix, for classes 0,1,2,3:')
 print('Test population is 30 points = 20% out of 150')
 print (cnf_matrix)
 print('Comment: no class 0 in the test sample')
+
+print('')
 print('Classification report:')
 print(classification_report(y_test, yhat))
 print('y_test:', y_test)
 
 # 2nd method for accuracy with F1 score 
 from sklearn.metrics import f1_score
+print('')
 print('Test and pedicted accuracy using f1_score:')
 print(f1_score(y_test , yhat , average ='weighted'))
 
