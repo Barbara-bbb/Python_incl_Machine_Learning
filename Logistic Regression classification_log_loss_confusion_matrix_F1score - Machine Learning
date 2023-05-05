@@ -120,3 +120,9 @@ plt.scatter(X_test[:,0], yhat)
 plt.xlabel('X_test normalized - Feature 1')
 plt.ylabel('yhat - predicted class')
 
+plt.figure(3)
+plt.scatter(X_test[:,0], yhat_prob[:,0])
+# plt.legend(['Predicted class'])
+plt.xlabel('X_test normalized - Feature 1')
+plt.ylabel('yhat_prob - predicted probability estimates for class 1')
+
