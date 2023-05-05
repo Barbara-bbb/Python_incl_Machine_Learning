@@ -5,6 +5,12 @@
 # It is applied for partitioning / segmentation cases into mutually exclusive groups (clusters).
 # Cases in each cluster (group) have similar characteristics (features).
 
+print('____________________________________________________________________________________________')
+print('')
+print('Problem description: Using K-Means Machine Learning algorithm for classification.')
+print('It is applied for partitioning / segmentation cases into mutually exclusive groups (clusters).')
+print('Cases in each cluster (group) have similar characteristics (features).')
+print('____________________________________________________________________________________________')
 
 import pandas as pd
 import numpy as np
