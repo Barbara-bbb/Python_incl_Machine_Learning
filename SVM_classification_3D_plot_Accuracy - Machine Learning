@@ -1,14 +1,6 @@
 # Open https://jupyter.org/try-jupyter/lab/ using Google Chrome. Open Notebook with Python.
 # In a new file, copy-paste the following code and run it. Pls wait a few seconds to get the output.
 
-# Problem description: Using the Support Vector Machine (SVM) model for classification.
-# It classifies cases by finding a separator, like a hyperplane or margin that that separates two classes. 
-
-# Kernelling is mapping data into a higher dimensional space. 
-# Kernelling functions of choice are: Linear, Polynomial, Radial basis function RBF, Sigmoid. 
-
-# Accuracy evaluation by confusion_matrix / F1 score. 3D plotting is used for visualization.
-
 # THE CODE
 
 import pandas as pd
