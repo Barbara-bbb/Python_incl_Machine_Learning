@@ -50,15 +50,18 @@ print(df.describe)
 # Converting Pandas data frame to Numpy array to use library sckit-learn
 
 X = df[['sepal_length','sepal_width','petal_length','petal_width']].values.astype(float)
-print(X[0:5])
+print('Numpy array X:')
+print( X[0:5])
 
 # Labels data
 y = df['species'].values
+print('Numpy array y:')
 print(y[0:5])
 
 # Normalize the data. Data Standardization with zero mean and unit variance.
 from sklearn import preprocessing
 X=preprocessing.StandardScaler().fit(X).transform(X.astype(float))
+print('Normalized X:')
 print(X[0:5])
 
 # Train-test split
