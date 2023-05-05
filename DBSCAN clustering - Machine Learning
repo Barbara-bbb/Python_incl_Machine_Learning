@@ -40,7 +40,7 @@ plt.scatter(X[: , 0], X[: , 1], 50, labels_non_norm,  alpha = 0.5)
 plt.title('DBSCAN on non-normalized data')
 
 # II. Normalize the data. Data Standardization with zero mean and unit variance (Z-score).
-from sklearn.preprocessing import StandardScaler
+from sklearn import preprocessing
 X_norm = preprocessing.StandardScaler().fit(X).transform(X.astype(float))
 print(X_norm[0:5])
 
