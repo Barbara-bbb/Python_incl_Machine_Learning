@@ -30,6 +30,7 @@ print(df.head())
 print(df.tail())
 
 # Get statistics of data frame
+print('')
 print(df.describe())
 
 # Find unique species names
@@ -46,7 +47,9 @@ df = df.drop(0, axis=0)
 print('')
 print('after replacement:')
 print(df.head())
-print(df.describe)
+print('')
+#print(df.describe)
+print('Numer of rows:', len(df))
 
 # Defining feature data set, X. 
 # Converting Pandas data frame to Numpy array to use library sckit-learn
@@ -123,6 +126,7 @@ print('y_test:', y_test)
 print('')
 from sklearn.metrics import log_loss
 print('log loss - performance of a classifier with the chosen solver is (between 0 and 1):')
+print('')
 print('Comment: classifier with lower log loss has better accuracy.')
 print(log_loss(y_test, yhat_prob))
 
