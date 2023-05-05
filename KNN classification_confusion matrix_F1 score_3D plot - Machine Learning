@@ -3,15 +3,33 @@
 
 # Problem description: K-Nearest Neighbours supervised Machine Learning algorithm. 
 # It is applied for prediction to which class a data point (data set array) belongs. 
-import pandas as pd
-import numpy as np
+
 # This is done, based on comparison to majority of similar data points that belong to a class. 
 # There are number of classes that contain similar to each other data points. 
 # Number of classes is defined upfront, by number ‘k’.
+
 # Accuracy evaluation by two methods (from the sklearn package): 
 # 1) accuracy_score and 2) confusion_matrix / F1 score functions.
 
+# THE CODE
 
+print('_______________________________________________________________________________________________')
+print('')
+print('Problem description: K-Nearest Neighbours supervised Machine Learning algorithm. ')
+print('It is applied for prediction to which class a data point (data set array) belongs. ')
+print('')
+print('This is done, based on comparison to majority of similar data points that belong to a class. ')
+print('There are number of classes that contain similar to each other data points. ')
+print('Number of classes is defined upfront, by number ‘k’.')
+print('')
+print('Accuracy evaluation by two methods (from the sklearn package): ')
+print(' 1) accuracy_score and 2) confusion_matrix / F1 score functions.')
+print('_______________________________________________________________________________________________')
+
+
+
+import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 %matplotlib inline
 
@@ -60,8 +78,8 @@ print('Testing data set:', X_test.shape, y_test.shape)
 
 print('X_train head:', X_train[0:5])
 print('y_train head:',y_train[0:5])
-print('X_test head:', X_test[0:15])
-print('y_test head:',y_test[0:15])
+print('X_test head:', X_test[0:5])
+print('y_test head:',y_test[0:5])
 
 # Importing library for KNN
 from sklearn.neighbors import KNeighborsClassifier
