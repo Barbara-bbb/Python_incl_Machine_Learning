@@ -1,23 +1,6 @@
 # Open https://jupyter.org/try-jupyter/lab/ using Google Chrome. Open Notebook with Python.
 # In a new file, copy-paste the following code and run it. Pls wait a few seconds to get the output.
 
-# Problem description: Logistic Regression classification Machine Learning algorithm. 
-# It is applied for prediction to which class a data point (data set array) belongs, 
-# on the basis of the Probability of the Class Estimates.
-
-# This is done, based on comparison to majority of similar data points that belong to a class. 
-# There are number of classes that contain similar to each other data points. 
-
-# Accuracy evaluation by two methods (from the sklearn package): 
-# 1) confusion_matrix / F1 score and 2) log loss (Logarithmic loss).
-
-# Log loss measures performance of a classifier with a chosen solver, where the predicted probability output is between 0 and 1.
-# Logistic Regression  solvers of choice for model training are: 'liblinear','newton-cg', 'lbfgs','sag','saga'. 
-
-# C is the parameter that indicates inverse of regularization strength (positive float).
-# Smaller C value specify stronger regularization.
-
-
 # THE CODE
 print('_______________________________________________________________________________________')
 print('')
