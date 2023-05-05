@@ -128,7 +128,7 @@ xdata = X_test[:,0]
 ydata = X_test[:,1]
 zdata = yhat
 ax3.scatter3D(xdata, ydata, zdata, c=zdata);
-ax3.set_title ('Predicted test dataset')
+ax3.set_title ('Predicted class species of test dataset')
 ax3.set_xlabel('sepal_length')
 ax3.set_ylabel('sepal_width')
 ax3.set_zlabel('species')
