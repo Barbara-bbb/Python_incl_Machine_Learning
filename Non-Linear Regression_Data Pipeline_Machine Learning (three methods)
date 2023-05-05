@@ -3,7 +3,7 @@
 
 # THE CODE
 
-print('____________________________________________________________________________________________')
+print('___________________________________________________________________________________________')
 print('')
 print('Problem description: non-linear regression analysis in Python, using three methods: ')
 print('1) Mathematical , 2) Polynomial Regression (function .polyfit), 3) Data Pipeline')
