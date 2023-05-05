@@ -1,10 +1,7 @@
 # Open https://jupyter.org/try-jupyter/lab/ using Google Chrome. Open Notebook with Python.
 # In a new file, copy-paste the following code and run it. Pls wait a few seconds to get the output.
 
-# Problem description: Using K-Means Machine Learning algorithm for classification.
-# It is applied for partitioning / segmentation cases into mutually exclusive groups (clusters).
-# Cases in each cluster (group) have similar characteristics (features).
-
+# THE CODE
 print('____________________________________________________________________________________________')
 print('')
 print('Problem description: Using K-Means Machine Learning algorithm for classification.')
