@@ -1,6 +1,8 @@
 # Open https://jupyter.org/try-jupyter/lab/ using Google Chrome. Open Notebook with Python.
 # In a new file, copy-paste the following code and run it.
 
+# THE CODE
+
 print("Warm up - Python basics")
 
 # NumPy array (vectors)
