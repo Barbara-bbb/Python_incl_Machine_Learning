@@ -33,6 +33,7 @@ print(df.tail())
 print(df.describe())
 
 # Find unique species names
+print('')
 print('unique species:')
 n = df['species'].unique()
 print(n)
@@ -42,6 +43,7 @@ df['species'].replace(['se', 'setosa','versicolor','virginica'],
                       [0, 1, 2, 3], inplace=True)
 # Deleting one row of 'se' category - only one point in data set, for the sake of having uniform data set
 df = df.drop(0, axis=0)
+print('')
 print('after replacement:')
 print(df.head())
 print(df.describe)
@@ -50,23 +52,27 @@ print(df.describe)
 # Converting Pandas data frame to Numpy array to use library sckit-learn
 
 X = df[['sepal_length','sepal_width','petal_length','petal_width']].values.astype(float)
+print('')
 print('Numpy array X:')
 print( X[0:5])
 
 # Labels data
 y = df['species'].values
+print('')
 print('Numpy array y:')
 print(y[0:5])
 
 # Normalize the data. Data Standardization with zero mean and unit variance.
 from sklearn import preprocessing
 X=preprocessing.StandardScaler().fit(X).transform(X.astype(float))
+print('')
 print('Normalized X:')
 print(X[0:5])
 
 # Train-test split
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=4)
+print('')
 print('Training data set:', X_train.shape, y_train.shape)
 print('Testing data set:', X_test.shape, y_test.shape)
 
@@ -84,10 +90,14 @@ LR = LogisticRegression (C=0.01, solver ='newton-cg').fit(X_train, y_train)
 LR
 # Prediction
 yhat = LR.predict(X_test)
-print('yhat: probability estimates / yhat of points belonging to each class',yhat)
+print('')
+print('yhat: probability estimates / yhat')
+print('of points belonging to each class:')
+print(yhat)
 
 # Prediction ordered by the classes labels
 yhat_prob = LR.predict_proba(X_test)
+print('')
 print('yhat_prob: probability estimates / yhat of points')
 print('belonging to each class, ordered by the classes lables: 1,2,3.')
 print('Showing first 10 rows only:')
