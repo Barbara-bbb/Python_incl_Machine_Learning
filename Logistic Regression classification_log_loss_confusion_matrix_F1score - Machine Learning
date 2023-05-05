@@ -18,6 +18,31 @@
 # Smaller C value specify stronger regularization.
 
 
+# THE CODE
+print('_______________________________________________________________________________________')
+print('')
+print('Problem description: Logistic Regression classification Machine Learning algorithm. ')
+print('It is applied for prediction to which class a data point (data set array) belongs,')
+print('on the basis of the Probability of the Class Estimates.')
+print('')
+print('This is done, based on comparison to majority of similar data points that belong to a class.')
+print('There are number of classes that contain similar to each other data points. ')
+print('')
+print('Accuracy evaluation by two methods (from the sklearn package): ')
+print(' 1) confusion_matrix / F1 score and 2) log loss (Logarithmic loss).')
+print('')
+print('Log loss measures performance of a classifier with a chosen solver, where the predicted')
+print('probability output is between 0 and 1.')
+print('Logistic Regression  solvers of choice for model training are: liblinear, newton-cg')
+print('lbfgs, sag, saga.')
+print('')
+print('C is the parameter that indicates inverse of regularization strength (positive float).')
+print('Smaller C value specify stronger regularization.')
+print('')
+print('_______________________________________________________________________________________')
+
+
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
