@@ -3,6 +3,14 @@
 
 # Problem description: DBSCAN clustering with noise (outliers) detection. 
 
+print('')
+print('___________________________________________________________________________')
+print('')
+print('Problem description: DBSCAN clustering with noise (outliers) detection.')
+print('')
+print('___________________________________________________________________________')
+print('')
+
 import numpy as np
 import pandas as pd
 from sklearn.cluster import DBSCAN
