@@ -1,6 +1,3 @@
-# Problem description: non-linear regression analysis in Python, using three methods: 
-# 1) Mathematical , 2) Polynomial Regression (function .polyfit), 3) Data Pipeline, for verification, utilizing Machine Learning.
-
 # Open https://jupyter.org/try-jupyter/lab/ using Google Chrome. Open Notebook with Python.
 # In a new file, copy-paste the following code and run it. Pls wait a few seconds to get the output.
 
