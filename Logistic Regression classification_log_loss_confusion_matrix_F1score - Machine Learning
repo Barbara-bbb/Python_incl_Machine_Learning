@@ -106,3 +106,17 @@ from sklearn.metrics import log_loss
 print('log loss - performance of a classifier with the chosen solver is (between 0 and 1):')
 print('Classifier with lower log loss has better accuracy.')
 log_loss(y_test, yhat_prob)
+
+# Visualization
+plt.figure(1)
+plt.scatter(X_test[:,0], y_test)
+# plt.legend(['Normalized feature 1 data' ])
+plt.xlabel('X_test normalized - Feature 1')
+plt.ylabel('y - actual class')
+
+plt.figure(2)
+plt.scatter(X_test[:,0], yhat)
+# plt.legend(['Predicted class'])
+plt.xlabel('X_test normalized - Feature 1')
+plt.ylabel('yhat - predicted class')
+
