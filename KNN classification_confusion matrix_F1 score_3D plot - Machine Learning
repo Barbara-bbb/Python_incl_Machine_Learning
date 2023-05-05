@@ -1,16 +1,6 @@
 # Open https://jupyter.org/try-jupyter/lab/ using Google Chrome. Open Notebook with Python.
 # In a new file, copy-paste the following code and run it. Pls wait a few seconds to get the output.
 
-# Problem description: K-Nearest Neighbours supervised Machine Learning algorithm. 
-# It is applied for prediction to which class a data point (data set array) belongs. 
-
-# This is done, based on comparison to majority of similar data points that belong to a class. 
-# There are number of classes that contain similar to each other data points. 
-# Number of classes is defined upfront, by number ‘k’.
-
-# Accuracy evaluation by two methods (from the sklearn package): 
-# 1) accuracy_score and 2) confusion_matrix / F1 score functions.
-
 # THE CODE
 
 print('_______________________________________________________________________________________________')
