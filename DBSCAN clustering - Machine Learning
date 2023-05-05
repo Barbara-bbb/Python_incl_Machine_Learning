@@ -12,15 +12,21 @@ import matplotlib.pyplot as plt
 # Source data set
 csv_path = 'data/iris.csv'
 df = pd.read_csv(csv_path)
+print('')
 print(df.head())
+print('')
 print(df.tail())
 
 # Defining feature data set / feature matrix, X. 
 # Converting Pandas data frame to Numpy array to use library sckit-learn
 
 X = df[['sepal_width', 'petal_width']].values.astype(float)
+print('')
+print('Chosen feature matrix X:')
 print(X[0:5])
+print('')
 print(X.shape)
+print('')
 print('X type:',type(X))
 
 plt.figure(1)
