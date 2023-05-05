@@ -4,11 +4,20 @@
 # Open https://jupyter.org/try-jupyter/lab/ using Google Chrome. Open Notebook with Python.
 # In a new file, copy-paste the following code and run it. Pls wait a few seconds to get the output.
 
+# THE CODE
+
+print('____________________________________________________________________________________________')
+print('')
+print('Problem description: non-linear regression analysis in Python, using three methods: ')
+print('1) Mathematical , 2) Polynomial Regression (function .polyfit), 3) Data Pipeline')
+print('for verification, utilizing Machine Learning.')
+print('')
+print('___________________________________________________________________________________________')
+
 
 # 1. Non-linear regression example
 
 print('1. Non-linear regression in Python:')
-
 # Import libraries
 import numpy as np
 import pandas as pd
