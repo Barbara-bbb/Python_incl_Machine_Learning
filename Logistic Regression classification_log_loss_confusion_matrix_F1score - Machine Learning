@@ -88,8 +88,10 @@ print('yhat: probability estimates / yhat of points belonging to each class',yha
 
 # Prediction ordered by the classes labels
 yhat_prob = LR.predict_proba(X_test)
-print('yhat_prob: probability estimates / yhat of points belonging to each class, ordered by the classes lables: 1,2,3:')
-print(yhat_prob)
+print('yhat_prob: probability estimates / yhat of points')
+print('belonging to each class, ordered by the classes lables: 1,2,3.')
+print('Showing first 10 rows only:')
+print(yhat_prob[0:10])
 
 # 1. Accuracy of predictions with confusion matrix:
 print('')
