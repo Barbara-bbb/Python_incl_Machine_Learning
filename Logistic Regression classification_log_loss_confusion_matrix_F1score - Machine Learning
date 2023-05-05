@@ -74,11 +74,15 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=4)
 print('')
 print('Training data set:', X_train.shape, y_train.shape)
+print('')
 print('Testing data set:', X_test.shape, y_test.shape)
-
+print('')
 print('X_train head:', X_train[0:5])
+print('')
 print('y_train head:',y_train[0:5])
+print('')
 print('X_test head:', X_test[0:5])
+print('')
 print('y_test head:',y_test[0:5])
 
 # Importing library for Logistic Regression
