@@ -2,3 +2,10 @@
 # In a new file, copy-paste the following code and run it. Pls wait a few seconds to get the output.
 
 # THE CODE
+
+print('________________')
+print('')
+print('Problem description: Clustering using the scikit-learn package.')
+print('It is applied for merging of cases into clusters, based on the Distance/ Proximity Matrix,')
+print('i.e. distance for one-dimensional feature matrix..')
+print('________________')
