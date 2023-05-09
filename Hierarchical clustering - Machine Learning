@@ -4,7 +4,7 @@
 # THE CODE
 print('________________')
 print('')
-print('Problem description: Clustering using the Scipy package.')
+print('Problem description: hierarchical clustering using the Scipy package.')
 print('It is applied for merging of cases into clusters, based on the Distance/ Proximity Matrix,')
 print('multi-dimensional feature matrix is used in this example.')
 print('________________')
