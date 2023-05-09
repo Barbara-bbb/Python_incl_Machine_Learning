@@ -89,7 +89,7 @@ clusters = fcluster (Z, max_d, criterion = 'distance')
 clusters
 
 # Plotting dendrogram
-fig = pylab.figure(figsize=(18,50))
+fig = pylab.figure(figsize=(15,40))
 def llf (id):
     return'[%s]' % (df['index'][id])
 
