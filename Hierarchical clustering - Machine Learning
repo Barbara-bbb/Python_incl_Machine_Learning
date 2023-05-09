@@ -72,7 +72,6 @@ print(X_norm[0:5])
 import pylab
 import scipy
 from scipy.cluster import hierarchy
-import scipy.cluster.hierarchy
 
 leng = X_norm.shape[0]
 Distance_matrix = scipy.zeros([leng,leng])
