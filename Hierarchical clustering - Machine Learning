@@ -1,0 +1,119 @@
+# Open https://jupyter.org/try-jupyter/lab/ using Google Chrome. Open Notebook with Python.
+# In a new file, copy-paste the following code and run it. Pls wait a few seconds to get the output.
+
+# THE CODE
+print('________________')
+print('')
+print('Problem description: Clustering using the Scipy package.')
+print('It is applied for merging of cases into clusters, based on the Distance/ Proximity Matrix,')
+print('multi-dimensional feature matrix is used in this example.')
+print('________________')
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+# Source data set
+csv_path = 'data/iris.csv'
+df = pd.read_csv(csv_path)
+print('')
+print(df.head())
+print('')
+print(df.tail())
+
+# Get statistics of data frame
+print('')
+print(df.describe())
+
+# Find unique species names
+print('')
+print('unique species:')
+n = df['species'].unique()
+print(n)
+
+# Replacing values
+df['species'].replace(['se', 'setosa','versicolor','virginica'],
+                      [0, 1, 2, 3], inplace=True)
+print('')
+print('after replacement:')
+print(df.head())
+
+# Add column 'index' to Features data set
+ind = np.linspace(0,149,150)
+print('ind:')
+print(ind [0:5])
+
+# Adding new column Labels to df with column location = 5
+df.insert (loc=5, column = 'index', value = ind)  
+print('')
+print('data frame with index:')
+print(df[0:5])
+
+# Defining feature data set / feature matrix, X. 
+# Converting Pandas data frame to Numpy array to use library sckit-learn (series of data sets values create an array)
+X = df[['sepal_length','sepal_width','petal_length','petal_width','species']].values.astype(float)
+print('')
+print(X[0:5])
+print('')
+print(X.shape)
+print('')
+print('X type:',type(X))
+
+# Normalize the data using MinMaxScaler(), each value is between 0 and 1.
+from sklearn.preprocessing import MinMaxScaler
+min_max_scaler = MinMaxScaler()
+
+X_norm = min_max_scaler.fit_transform(X.astype(float))
+print('')
+print(X_norm[0:5])
+
+# Method I - hierarchical clustering with Scipy
+import pylab
+import scipy
+from scipy.cluster import hierarchy
+import scipy.cluster.hierarchy
+
+leng = X_norm.shape[0]
+Distance_matrix = scipy.zeros([leng,leng])
+for i in range (leng):
+    for j in range (leng):
+        Distance_matrix[i,j] = scipy.spatial.distance.euclidean(X_norm[i], X_norm[j])
+Distance_matrix
+
+# Modeling using hierarchy clustering with Scipy
+Z = hierarchy.linkage(Distance_matrix, 'complete')
+
+from scipy.cluster.hierarchy import fcluster
+max_d = 3
+clusters = fcluster (Z, max_d, criterion = 'distance')
+clusters
+
+# Plotting dendrogram
+fig = pylab.figure(figsize=(18,50))
+def llf (id):
+    return'[%s]' % (df['index'][id])
+
+dendro = hierarchy.dendrogram(Z, leaf_label_func = llf, leaf_rotation=0, leaf_font_size=12, orientation='right')
+
+
+# 2. Method II
+# Modeling using skcikit-learn
+# import pylab
+# import scipy
+# from scipy.cluster import hierarchy
+# import scipy.cluster.hierarchy
+
+# from sklearn.metrics.pairwise import euclidean_distances
+# dist_matrix = euclidean_distances (X_norm, X_norm)
+# print(dist_matrix)
+# Z = hierarchy.linkage (dist_matrix, 'complete') 
+
+# Plotting
+# fig = pylab.figure(figsize=(18,50))
+# def llf(id):
+#    return '[%s %s %s]' % (df['index'][id], int(float(df['type'][id])) )
+# dendro = hierarchy.dendrogram(Z, leaf_label_func=llf, leaf_rotation=0, leaf_font_size=12,orientation='right')
+                              
+# Modeling - creating distance_matrix to be filled
+        
