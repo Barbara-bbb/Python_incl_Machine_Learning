@@ -99,7 +99,7 @@ print(clusters)
 # b) by specifying number of clusters directly:
 n=10
 clusters = fcluster (Z, n, criterion = 'maxclust')
-print('For n number of clusters specified upfront:')
+print('Clustering with n number of clusters specified upfront:')
 print(clusters)
 
 # Plotting dendrogram
