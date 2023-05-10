@@ -83,10 +83,24 @@ Distance_matrix
 # Modeling using hierarchy clustering with Scipy
 Z = hierarchy.linkage(Distance_matrix, 'complete')
 
+# Regulation of formation of clusters:
+
+# a) by maximum distance limit applied for disjoint clusters, specified by max_d,
+# in order to create 'a cut-off line'.
+# Disjoint clusters place each object in one and only one cluster.
+
 from scipy.cluster.hierarchy import fcluster
-max_d = 3
-clusters = fcluster (Z, max_d, criterion = 'distance')
-clusters
+max_distance = 3
+clusters = fcluster (Z, max_distance, criterion = 'distance')
+print('max_d for clusters:')
+print(clusters)
+
+# b) by specifying number of clusters directly:
+n=10
+clusters = fcluster (Z, n, criterion = 'maxclust')
+print('For n number of clusters:')
+print(clusters)
+
 
 # Plotting dendrogram
 fig = pylab.figure(figsize=(15,40))
@@ -115,4 +129,3 @@ dendro = hierarchy.dendrogram(Z, leaf_label_func = llf, leaf_rotation=0, leaf_fo
 # dendro = hierarchy.dendrogram(Z, leaf_label_func=llf, leaf_rotation=0, leaf_font_size=12,orientation='right')
                               
 # Modeling - creating distance_matrix to be filled
-        
