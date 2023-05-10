@@ -80,7 +80,8 @@ for i in range (leng):
         Distance_matrix[i,j] = scipy.spatial.distance.euclidean(X_norm[i], X_norm[j])
 Distance_matrix
 
-# Modeling using hierarchy clustering with Scipy
+# Modeling using hierarchy clustering with Scipy, using Complete-linkage
+# Clustering method, which is described as maximum distance between clusters 
 Z = hierarchy.linkage(Distance_matrix, 'complete')
 
 # Regulation of formation of clusters:
