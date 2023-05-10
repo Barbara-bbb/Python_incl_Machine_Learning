@@ -92,15 +92,14 @@ Z = hierarchy.linkage(Distance_matrix, 'complete')
 from scipy.cluster.hierarchy import fcluster
 max_distance = 3
 clusters = fcluster (Z, max_distance, criterion = 'distance')
-print('max_d for clusters:')
+print('max_d for clusters for resolution adjustment:')
 print(clusters)
 
 # b) by specifying number of clusters directly:
 n=10
 clusters = fcluster (Z, n, criterion = 'maxclust')
-print('For n number of clusters:')
+print('For n number of clusters specified upfront:')
 print(clusters)
-
 
 # Plotting dendrogram
 fig = pylab.figure(figsize=(15,40))
