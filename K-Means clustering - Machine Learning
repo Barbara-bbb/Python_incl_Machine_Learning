@@ -4,7 +4,7 @@
 # THE CODE
 print('____________________________________________________________________________________________')
 print('')
-print('Problem description: Using K-Means Machine Learning algorithm for classification.')
+print('Problem description: Using K-Means Machine Learning algorithm for clustering.')
 print('It is applied for partitioning / segmentation cases into mutually exclusive groups (clusters).')
 print('Cases in each cluster (group) have similar characteristics (features).')
 print('____________________________________________________________________________________________')
