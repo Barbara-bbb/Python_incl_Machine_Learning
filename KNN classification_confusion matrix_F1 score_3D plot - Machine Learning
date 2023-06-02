@@ -134,6 +134,7 @@ print('2. Train and pedicted accuracy using confusion matrix, for classes 0,1,2,
 print('Train population is 120 points = 80% out of 150')
 print(cnf_matrix2)
 print('')
+print('Comment: there is 1 point of class 0 in the train sample, predicted as class 1')
 print('')
 print('Class 1: TP_true_positive = 33 points, class 2: TP_true_positive = 44 points, class 3: TP_true_positive = 38 points')
 print('Class 1: FP_false positive = 1 points, class 2: FP_false positive = 3 points, class 3: FP_false positive = 1 points')
