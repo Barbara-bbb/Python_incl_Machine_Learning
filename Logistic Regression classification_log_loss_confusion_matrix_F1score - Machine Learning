@@ -125,9 +125,18 @@ print('Test and pedicted accuracy using confusion matrix, for classes 1,2,3:')
 print('Test population is 30 points = 20% out of 149')
 print (cnf_matrix)
 print('')
+print('Class 1: TP_true_positive = 17 points, class 2: TP_true_positive = 4 points, class 3: TP_true_positive = 5 points')
+print('Class 1: FP_false positive = 0 points, class 2: FP_false positive = 2 points, class 3: FP_false positive = 2 points')
+print('Class 1: FN_false nagative = 0 points, class 2: FN_false nagative = 2 points, class 3: FN_false nagative = 2 points')
+print('')
+print('Precision = TP / (TP + FP), Recall = TP / (TP + FN), F1 = 2 * (prc * rec) / (prc + rec)')
+print('')
+
 print('Classification report:')
 print(classification_report(y_test, yhat))
 print('y_test:', y_test)
+print('')
+print('Class 1: 17 points, class 2: 6 points, class 3: 7 points, total 30 test points')
 
 # 2. Accuracy performance of classifier for predictions with log loss:
 print('')
