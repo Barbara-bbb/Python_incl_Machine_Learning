@@ -5,7 +5,7 @@
 
 print('_______________________________________________________________________________________________')
 print('')
-print('Problem description: K-Nearest Neighbours supervised Machine Learning algorithm. ')
+print('Problem description: K-Nearest Neighbours supervised Machine Learning classification algorithm. ')
 print('It is applied for prediction to which class a data point (data set array) belongs. ')
 print('')
 print('This is done, based on comparison to majority of similar data points that belong to a class. ')
