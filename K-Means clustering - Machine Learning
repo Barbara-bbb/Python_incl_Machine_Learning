@@ -60,6 +60,7 @@ print(X_norm[0:5])
 # Modeling on normalized data
 from sklearn.cluster import KMeans
 clusterNum = 3  # assigning number of clusters
+print('n_init= 12 number of times the K-means algorithm will be run with different centroid seeds')
 k_means = KMeans (init = 'k-means++', n_clusters = clusterNum, n_init= 12)
 k_means.fit(X_norm)
 labels_norm = k_means.labels_   # Save labels 
