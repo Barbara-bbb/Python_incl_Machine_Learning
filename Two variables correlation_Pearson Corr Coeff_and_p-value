@@ -1,0 +1,55 @@
+# Open https://jupyter.org/try-jupyter/lab/ using Google Chrome. Open Notebook with Python.
+# In a new file, copy-paste the following code and run it. Pls wait a few seconds to get the output.
+
+# THE CODE
+print('____________________________________________________________________________________________')
+print('')
+print('Problem description: Pearson Correlation Coefficient and p-value.')
+print('')
+print('For p-value < 0.001 significant/strong correlation between two variables.')
+print('For p-value > 0.1 no correlation between two variables.')
+print('For Pearson Correlation Coefficient = 1 there is strong positive correlation between two variables.')
+print('For Pearson Correlation Coefficient = 0 there no correlation between two variables.')
+print('')
+print('____________________________________________________________________________________________')
+
+import pandas as pd
+import numpy as np
+from scipy import stats
+
+# Source data set
+csv_path = 'data/iris.csv'
+df = pd.read_csv(csv_path)
+print('')
+print(df.head())
+print('')
+print(df.tail())
+
+# Get statistics of data frame
+print('')
+print(df.describe())
+
+# 1. Pearson Correlation coefficient and P-value
+pearson_coef, p_value = stats.pearsonr (df['sepal_length'], df['sepal_width'])
+print('Pearson Correlation Coefficient for sepal length and width:', pearson_coef)
+print('with P-value:', p_value)
+
+# Plot
+plt.figure(1)
+plt.scatter(df['sepal_length'], df['sepal_width'], 200,  alpha = 0.5)
+plt.xlabel ('sepal_length')
+plt.ylabel ('sepal_width')
+
+print('')
+# 2. Pearson Correlation coefficient and P-value
+pearson_coef, p_value = stats.pearsonr (df['petal_length'], df['petal_width'])
+print('Pearson Correlation Coefficient for petal length and width:', pearson_coef)
+print('with P-value:', p_value)
+
+# Plot
+plt.figure(2)
+plt.scatter(df['petal_length'], df['petal_width'], 200,  alpha = 0.5)
+plt.xlabel ('petal_length')
+plt.ylabel ('petal_width')
+
+
