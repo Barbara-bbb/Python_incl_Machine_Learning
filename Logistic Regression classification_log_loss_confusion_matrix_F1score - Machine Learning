@@ -58,18 +58,18 @@ print(df.head())
 print('')
 print('Numer of rows:', len(df))
 
-# Defining feature data set, X. 
+# Defining feature data set / the feature matrix, X. 
 # Converting Pandas data frame to Numpy array to use library sckit-learn
 
 X = df[['sepal_length','sepal_width','petal_length','petal_width']].values.astype(float)
 print('')
-print('Numpy array X:')
+print('Numpy array X / the feature matrix X:')
 print( X[0:5])
 
-# Labels data
+# Labels data, the response vector y.
 y = df['species'].values
 print('')
-print('Numpy array y:')
+print('Numpy array y / the response vector y:')
 print(y[0:5])
 
 # Normalize the data. Data Standardization with zero mean and unit variance.
