@@ -48,7 +48,7 @@ print('')
 print('after replacement:')
 print(df.head())
 
-# Defining feature data set, X. 
+# Defining the feature data set, X. 
 # Converting Pandas data frame to Numpy array to use library sckit-learn
 
 X = df[['sepal_length','sepal_width','petal_length','petal_width']].values.astype(float)
@@ -58,7 +58,7 @@ print('')
 print('type of X:')
 print(type(X))
 
-# Labels data
+# Labels data, the repsonse vector y.
 y = df['species'].values
 print('')
 print(y[0:5])
