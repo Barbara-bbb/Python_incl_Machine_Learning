@@ -40,7 +40,7 @@ print('')
 print('after replacement:')
 print(df.head())
 
-# Defining feature data set / feature matrix, X. 
+# Defining feature data set / the feature matrix, X. 
 # Converting Pandas data frame to Numpy array to use library sckit-learn (series of data sets values create an array)
 X = df[['sepal_length','sepal_width','petal_length','petal_width','species']].values.astype(float)
 print('')
