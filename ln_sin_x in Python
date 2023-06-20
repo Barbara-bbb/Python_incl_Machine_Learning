@@ -1,17 +1,18 @@
+# Plotting mathematical functions: ln(sin(x), ln(x), log(x)
+
 import numpy as np
 import pandas as pd
-from sklearn.cluster import DBSCAN
 import matplotlib.pyplot as plt
 %matplotlib inline
-import seaborn as sns
 
-
-
-# 
-x= np.linspace (0, 100, 100)
+# x= np.linspace (-100, 20, 100)  # x must be > 0
+x = np.linspace (0, 20, 100)
 
 # np.log is ln, whereas np.log10 is your standard base 10 log
 y = np.log(np.sin(x))
+
+g = np.log10(x)
+h= np.log(x)
 
 print(x[0:5])
 print(y[0:5])
@@ -19,3 +20,11 @@ print(y[0:5])
 plt.figure(1)
 plt.scatter( x , y )
 plt.title('ln(sin(x))')
+
+plt.figure(2)
+plt.scatter( x , g )
+plt.title('log(x)')
+
+plt.figure(3)
+plt.scatter( x , h )
+plt.title('ln(x)')
