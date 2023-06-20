@@ -1,0 +1,21 @@
+import numpy as np
+import pandas as pd
+from sklearn.cluster import DBSCAN
+import matplotlib.pyplot as plt
+%matplotlib inline
+import seaborn as sns
+
+
+
+# 
+x= np.linspace (0, 100, 100)
+
+# np.log is ln, whereas np.log10 is your standard base 10 log
+y = np.log(np.sin(x))
+
+print(x[0:5])
+print(y[0:5])
+
+plt.figure(1)
+plt.scatter( x , y )
+plt.title('ln(sin(x))')
