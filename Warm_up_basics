@@ -9,7 +9,9 @@ print("Warm up - Python basics")
 import numpy as np
 a=np.array([0.4,1.1,2.9,3.7,4.3], dtype = float)
 # a2=np.array([0,1,2,3,4])
-print(a, 'NumPy array')
+
+print ('NumPy array')
+print(a)
 a[0]
 print(a[0])
 
@@ -22,7 +24,10 @@ print('b:',b)
 print('')
 # Cast dictionary to Pandas data frame
 dictionary={'Adventure': (110,103), 'Psychology':(105,101)}
-print(dictionary, 'Dictionary')
+
+print('Dictionary')
+print(dictionary)
+
 s=dictionary['Adventure']
 print('s:', s)
 s2=dictionary.keys ()
@@ -34,7 +39,8 @@ print('')
 # Pandas data frames
 import pandas as pd
 dictionary_df = pd.DataFrame(dictionary)
-print( dictionary_df, 'Dictionary converted to Pandas data frame')
+print('Dictionary converted to Pandas data frame')
+print( dictionary_df)
 
 print('')
 # Function
@@ -42,8 +48,8 @@ def add1(t):
     b=t+1
     return b
 
-print(add1(4))
 print('Output of function with a= 4:')
+print(add1(4))
 
 print('')
 # For loop (remember about indent and writing semicolon :)
