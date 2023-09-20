@@ -9,7 +9,6 @@ print("Warm up - Python basics")
 import numpy as np
 a=np.array([0.4,1.1,2.9,3.7,4.3], dtype = float)
 # a2=np.array([0,1,2,3,4])
-print('NumPy array')
 print(a)
 a[0]
 print(a[0])
