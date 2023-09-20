@@ -98,7 +98,7 @@ print('unique species:')
 print(df['species'].unique())
 
 print('')
-print('Group by: get an average of 'sepal_length_A' 'sepal_width' 'petal_length' 'petal_width' for each group of species')
+print('Group by: get an average of sepal_length_A, sepal_width, petal_length, petal_width for each group of species')
 # Group by: get an average of 'sepal_length_A', 'sepal_width', 'petal_length', 'petal_width' for each group of species
 df_grb = df.groupby(['species'], as_index=False).mean()
 print(df_grb)
