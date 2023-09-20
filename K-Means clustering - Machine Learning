@@ -57,6 +57,7 @@ X_norm = preprocessing.StandardScaler().fit(X).transform(X.astype(float))
 print('')
 print(X_norm[0:5])
 
+print('')
 # Modeling on normalized data
 from sklearn.cluster import KMeans
 clusterNum = 3  # assigning number of clusters
