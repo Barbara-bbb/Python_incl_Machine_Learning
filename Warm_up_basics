@@ -111,7 +111,7 @@ print(df_value_counts)
 
 print('')
 # Merge data frame adding one more column 
-print('Merge data frame adding one more column ')
+print('Merge data frame adding one more column using pd.concat')
 column_z = np.array(range(0,150))
     #convert numPy array to Pandas data frame
 column_z= pd.DataFrame(column_z)
