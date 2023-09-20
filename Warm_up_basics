@@ -104,7 +104,7 @@ df_grb = df.groupby(['species'], as_index=False).mean()
 print(df_grb)
 
 print('')
-print('Value_counts: how many values are there for each 'species'?')
+print('Value_counts: how many values are there for each species?')
 # Value_counts: how many values are there for each 'species'?
 df_value_counts = df['species'].value_counts()
 print(df_value_counts)
