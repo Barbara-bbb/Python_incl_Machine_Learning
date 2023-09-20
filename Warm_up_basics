@@ -76,9 +76,11 @@ df = pd.read_csv(csv_path)
 print(df.head())
 print(df.tail())
 
+print('')
 # Get statistics of data frame
 print(df.describe())
 
+print('')
 mean = df['sepal_length'].mean()
 print('avg sepal length:', mean)
 
