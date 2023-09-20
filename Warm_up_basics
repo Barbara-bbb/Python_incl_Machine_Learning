@@ -84,6 +84,7 @@ print('')
 mean = df['sepal_length'].mean()
 print('avg sepal length:', mean)
 
+print('')
 df.rename(columns ={'sepal_length':'sepal_length_A'}, inplace = True)
 print(df.head())
 
