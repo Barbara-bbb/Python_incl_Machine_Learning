@@ -1,4 +1,4 @@
-# Plotting mathematical functions: ln(sin(x), ln(x), log(x)
+# Plotting mathematical functions: ln(sin(x)), ln(x), log(x)
 
 import numpy as np
 import pandas as pd
