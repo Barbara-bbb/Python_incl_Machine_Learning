@@ -38,11 +38,11 @@ plt.show()
 # Accuracy of model
 print("Mean absolute error: %.2f" % np.mean(np.absolute(y - y_data)))
 print("Residual sum of squares (MSE): %.2f" % np.mean((y - y_data) ** 2))
-# Ideal MSE = 0. Interpret MSE: https://stephenallwright.com/interpret-mse/
+print('Ideal MSE = 0. Interpret MSE: https://stephenallwright.com/interpret-mse/')
 
 from sklearn.metrics import r2_score 
 print("R2-score: %.2f" % r2_score(y_data,y))
-# Ideal R2 = 1.
+print ('Ideal R2 = 1')
 
 
 # 2. The same example as above, solved using Polynomial Regression (function .polyfit) 
