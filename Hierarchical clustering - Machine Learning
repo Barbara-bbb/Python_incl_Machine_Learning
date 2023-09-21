@@ -90,12 +90,14 @@ Z = hierarchy.linkage(Distance_matrix, 'complete')
 # in order to create 'a cut-off line'.
 # Disjoint clusters place each object in one and only one cluster.
 
+print('')
 from scipy.cluster.hierarchy import fcluster
 max_distance = 3
 clusters = fcluster (Z, max_distance, criterion = 'distance')
 print('max_d for clusters for resolution adjustment:')
 print(clusters)
 
+print('')
 # b) by specifying number of clusters directly:
 n=10
 clusters = fcluster (Z, n, criterion = 'maxclust')
