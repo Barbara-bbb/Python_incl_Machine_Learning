@@ -23,7 +23,8 @@ import matplotlib.pylab as plt
 # Plotting
 x = np.arange (-10.0, 10.0, 0.8)
 # ** is the power operator
-y = 10 * x +  x ** 2 
+y = 10 * x +  x ** 2
+print('Equation given by the author of the code y:',y)
 y_noise = 10 * np.random.normal (size = x.size)
 y_data = y + y_noise
 
