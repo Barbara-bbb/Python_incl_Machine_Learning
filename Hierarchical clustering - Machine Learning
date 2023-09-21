@@ -78,6 +78,8 @@ length = X_norm.shape[0]
 print('length', length)
 
 Distance_matrix = scipy.zeros([length,length])
+print('Distance_matrix', Distance_matrix)
+
 for i in range (length):
     for j in range (length):
         Distance_matrix[i,j] = scipy.spatial.distance.euclidean(X_norm[i], X_norm[j])
