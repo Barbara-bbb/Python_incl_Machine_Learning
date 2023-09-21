@@ -95,21 +95,19 @@ pipe = Pipeline(Input)
 pipe
 
 # Convert Numpy to Pandas data frame. Pandas data frame are used for the Pipeline.
-x = pd.DataFrame(x)
-Z = x
+x = pd.DataFrame(x).astype(float)
 y_data = pd.DataFrame(y_data)
 
 # Training the pipeline object. 
-Z = Z.astype(float)
-pipe.fit (Z, y_data)
+pipe.fit (x, y_data)
 
 # Normalize the data, perform transform and create prediction at the same time
-y_pred_pipe = pipe.predict (Z)
+y_pred_pipe = pipe.predict (x)
 y_pred_pipe[0:4] 
 
 # Plotting
-plt.plot(Z, y_pred_pipe, 'r')
-plt.plot(Z, y_data,'bo')
+plt.plot(x, y_pred_pipe, 'r')
+plt.plot(x, y_data,'bo')
 plt.title ('Non-linear regression / Polynomial Fit with Pipeline')
 plt.xlabel ('Independent variable')
 plt.ylabel ('Dependent variable')
