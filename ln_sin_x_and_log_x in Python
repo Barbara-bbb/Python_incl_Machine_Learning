@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 # x= np.linspace (-100, 20, 100)  # x must be > 0
 x = np.linspace (0, 20, 100)
 
-# np.log is ln, whereas np.log10 is your standard base 10 log
+# Note: np.log is ln, whereas np.log10 is your standard base 10 log
 y = np.log(np.sin(x))
 g = np.log10(x)
 h= np.log(x)
