@@ -104,6 +104,7 @@ clusters = fcluster (Z, n, criterion = 'maxclust')
 print('Clustering with n number of clusters specified upfront:')
 print(clusters)
 
+print('')
 # Plotting dendrogram
 print ('Plotting dendrogram for criterion of ')
 print(' the max. distance between clusters - the base case')
