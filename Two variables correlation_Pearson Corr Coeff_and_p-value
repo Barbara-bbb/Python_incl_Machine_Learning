@@ -28,8 +28,10 @@ print(df.tail())
 
 # Get statistics of data frame
 print('')
+print('Get statistics of data frame')
 print(df.describe())
 
+print('')
 # 1. Pearson Correlation coefficient and P-value
 pearson_coef, p_value = stats.pearsonr (df['sepal_length'], df['sepal_width'])
 print('Pearson Correlation Coefficient for sepal length and width:', pearson_coef)
