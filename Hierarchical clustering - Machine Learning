@@ -75,6 +75,8 @@ import scipy
 from scipy.cluster import hierarchy
 
 leng = X_norm.shape[0]
+print('leng', leng)
+
 Distance_matrix = scipy.zeros([leng,leng])
 for i in range (leng):
     for j in range (leng):
