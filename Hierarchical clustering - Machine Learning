@@ -39,12 +39,11 @@ print('')
 print('after replacement:')
 print(df.head())
 
-# Add column 'index' to Features data set
+# Add column 'index' to Features data set, column location = 5
 ind = np.linspace(0,149,150)
 print('ind:')
 print(ind [0:5])
 
-# Adding new column Labels to df with column location = 5
 df.insert (loc=5, column = 'index', value = ind)  
 print('')
 print('data frame with index:')
