@@ -29,7 +29,6 @@ print(df.tail())
 # Get statistics of data frame
 print('')
 print('Statistics of data frame:')
-print('')
 print(df.describe())
 
 print('')
