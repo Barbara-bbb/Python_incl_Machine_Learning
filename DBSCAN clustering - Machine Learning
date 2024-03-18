@@ -26,7 +26,7 @@ print('')
 print(df.tail())
 
 # Defining feature data set / feature matrix, X. 
-# Converting Pandas data frame to Numpy array to use library sckit-learn
+# Converting Pandas data frame to Numpy array to use library scikit-learn
 
 X = df[['sepal_width', 'petal_width']].values.astype(float)
 print('')
