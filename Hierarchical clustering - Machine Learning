@@ -120,7 +120,7 @@ def llf (id):
 dendro = hierarchy.dendrogram(HL, leaf_label_func = llf, leaf_rotation=0, leaf_font_size=12, orientation='right')
 
 
-# 2. Method II
+# Method II - not done yet
 # Modeling using skcikit-learn
 # import pylab
 # import scipy
