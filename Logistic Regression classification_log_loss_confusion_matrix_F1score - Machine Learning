@@ -59,7 +59,7 @@ print('')
 print('Numer of rows:', len(df))
 
 # Defining feature data set - the feature matrix, X. 
-# Converting Pandas data frame to Numpy array to use library sckit-learn
+# Converting Pandas data frame to Numpy array to use library scikit-learn
 
 X = df[['sepal_length','sepal_width','petal_length','petal_width']].values.astype(float)
 print('')
