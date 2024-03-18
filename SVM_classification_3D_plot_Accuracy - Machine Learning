@@ -58,7 +58,7 @@ print('')
 print('type of X:')
 print(type(X))
 
-# Labels data, the repsonse vector y.
+# Labels data - the repsonse vector y.
 y = df['species'].values
 print('')
 print(y[0:5])
