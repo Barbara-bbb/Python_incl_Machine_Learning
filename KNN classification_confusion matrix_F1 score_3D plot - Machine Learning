@@ -56,7 +56,7 @@ print('')
 print('Numpy type dataset - the feature matrix X:')
 print(X[0:5])
 
-# Labels data / the repsonse vector y.
+# Labels data - the repsonse vector y.
 y = df['species'].values
 print('')
 print('Numpy type dataset - the response vector y:')
