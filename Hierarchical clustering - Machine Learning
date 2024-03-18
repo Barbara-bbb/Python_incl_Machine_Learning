@@ -50,7 +50,7 @@ print('data frame with index:')
 print(df[0:5])
 
 # Defining feature data set / feature matrix, X. 
-# Converting Pandas data frame to Numpy array to use library sckit-learn (series of data sets values create an array)
+# Converting Pandas data frame to Numpy array to use library scikit-learn (series of data sets values create an array)
 X = df[['sepal_length','sepal_width','petal_length','petal_width','species']].values.astype(float)
 print('')
 print('Defining feature data set / feature matrix, X')
