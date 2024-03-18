@@ -121,7 +121,7 @@ dendro = hierarchy.dendrogram(HL, leaf_label_func = llf, leaf_rotation=0, leaf_f
 
 
 # Method II - not done yet
-# Modeling using skcikit-learn
+# Modeling using scikit-learn
 # import pylab
 # import scipy
 # from scipy.cluster import hierarchy
