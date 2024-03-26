@@ -69,7 +69,7 @@ X_norm = min_max_scaler.fit_transform(X.astype(float))
 print('')
 print(X_norm[0:5])
 
-# Method I - hierarchical clustering with Scipy
+# Method 1 - hierarchical clustering with Scipy
 import pylab
 import scipy
 from scipy.cluster import hierarchy
@@ -119,7 +119,7 @@ def llf (id):
 
 dendro = hierarchy.dendrogram(HL, leaf_label_func = llf, leaf_rotation=0, leaf_font_size=12, orientation='right')
 
-# Method II - not done yet
+# Method 2 - not done yet
 # Modeling using scikit-learn
 # import pylab
 # import scipy
