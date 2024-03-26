@@ -86,10 +86,10 @@ for i in range (length):
 Distance_matrix
 
 # Modeling using hierarchy clustering with Scipy, using Complete-linkage
-# Clustering method, which is described as maximum distance between clusters 
+# Clustering method, which is described as maximum distance between clusters - the base case 
 HL = hierarchy.linkage(Distance_matrix, 'complete')
 
-# Regulation of formation of clusters:
+# Regulation of formation of clusters can also be done by:
 
 # a) by maximum distance limit applied for disjoint clusters, specified by max_d,
 # in order to create 'a cut-off line'.
@@ -99,20 +99,20 @@ print('')
 from scipy.cluster.hierarchy import fcluster
 max_distance = 3
 clusters = fcluster (HL, max_distance, criterion = 'distance')
-print('max_d for clusters for resolution adjustment:')
+print('I. Hierarchical clustering using max_d for clusters for resolution adjustment:')
 print(clusters)
 
 print('')
 # b) by specifying number of clusters directly:
 n=10
 clusters = fcluster (HL, n, criterion = 'maxclust')
-print('Clustering with n number of clusters specified upfront:')
+print('II. Hierarchical clustering with n number of clusters specified upfront:')
 print(clusters)
 
 print('')
 # Plotting dendrogram
 print ('Plotting dendrogram for criterion of ')
-print(' the max. distance between clusters - the base case')
+print(' III. Hierarchical clustering using the Complete Linkage, i.e. the max. distance between clusters - the base case')
 fig = pylab.figure(figsize=(15,40))
 def llf (id):
      return'[%s]' % (df['index'][id])
