@@ -106,7 +106,7 @@ print('')
 # b) by specifying number of clusters directly:
 n=10
 clusters = fcluster (HL, n, criterion = 'maxclust')
-print('II. Hierarchical clustering with n number (n=10) of clusters specified upfront:')
+print('II. Hierarchical clustering with n number of clusters specified upfront (n=10):')
 print(clusters)
 
 print('')
