@@ -111,8 +111,8 @@ print(clusters)
 
 print('')
 # Plotting dendrogram
-print ('Plotting dendrogram for criterion of ')
-print(' III. Hierarchical clustering using the Complete Linkage, i.e. the max. distance between clusters - the base case')
+print ('III. Plotting dendrogram for criterion of hierarchical clustering using the Complete Linkage,')
+print('i.e. the max. distance between clusters - the base case')
 fig = pylab.figure(figsize=(15,40))
 def llf (id):
      return'[%s]' % (df['index'][id])
