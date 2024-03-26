@@ -99,14 +99,14 @@ print('')
 from scipy.cluster.hierarchy import fcluster
 max_distance = 3
 clusters = fcluster (HL, max_distance, criterion = 'distance')
-print('I. Hierarchical clustering using max_d for clusters for resolution adjustment:')
+print('I. Hierarchical clustering using max_d = 3 for clusters for resolution adjustment:')
 print(clusters)
 
 print('')
 # b) by specifying number of clusters directly:
 n=10
 clusters = fcluster (HL, n, criterion = 'maxclust')
-print('II. Hierarchical clustering with n number of clusters specified upfront:')
+print('II. Hierarchical clustering with n number (n=10) of clusters specified upfront:')
 print(clusters)
 
 print('')
@@ -118,7 +118,6 @@ def llf (id):
      return'[%s]' % (df['index'][id])
 
 dendro = hierarchy.dendrogram(HL, leaf_label_func = llf, leaf_rotation=0, leaf_font_size=12, orientation='right')
-
 
 # Method II - not done yet
 # Modeling using scikit-learn
