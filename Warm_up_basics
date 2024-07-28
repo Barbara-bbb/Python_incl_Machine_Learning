@@ -48,7 +48,7 @@ def add1(t):
     b=t+1
     return b
 
-print('Output of function with a= 4:')
+print('Output of function with t= 4:')
 print(add1(4))
 
 print('')
