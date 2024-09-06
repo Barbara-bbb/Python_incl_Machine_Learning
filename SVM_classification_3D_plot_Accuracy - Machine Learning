@@ -13,7 +13,7 @@ print('_________________________________________________________________________
 print('')
 print('Problem description: Using the Support Vector Machine (SVM) model for classification.')
 print('')
-print('It classifies cases by finding a separator, like a hyperplane or margin that that')
+print('It classifies cases by finding a separator, like a hyperplane or margin that')
 print('separates two classes.')
 print('')
 print('Kernelling is mapping data into a higher dimensional space. ')
