@@ -1,0 +1,27 @@
+# Open https://jupyter.org/try-jupyter/lab/ using Google Chrome. Open Notebook with Python.
+# In a new file, copy-paste the following code and run it.
+
+# THE CODE
+
+print("Warm up - Python basics")
+
+# NumPy array (vectors)
+import numpy as np
+print ('NumPy array')
+a=np.array([0.4,1.1,2.9,3.7,4.3], dtype = float)
+# a2=np.array([0,1,2,3,4])
+
+print('a:', a)
+a[0]
+print(a[0])
+
+mean = np.mean(a)
+print('mean:', mean)
+
+b=np.array([[1,2,3],[1,2,4],[1,2,3],[1,2,4] ])
+print('The covariance matrix of b:')
+print(np.cov(b))
+
+c=np.array([[1,2,3],[1,2,3]])
+print('The covariance matrix of c:')
+print(np.cov(c))
