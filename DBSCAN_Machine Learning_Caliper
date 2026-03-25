@@ -1,0 +1,60 @@
+# Open https://jupyter.org/try-jupyter/lab/ using Google Chrome. Open Notebook with Python.
+# In a new file, copy-paste the following code and run it. Pls wait a few seconds to get the output.
+
+# THE CODE
+
+print('')
+print('___________________________________________________________________________')
+print('')
+print('Problem description: DBSCAN clustering with noise (outliers) detection.')
+print('Exercise with a caliper.')
+print('___________________________________________________________________________')
+print('')
+
+import numpy as np
+import pandas as pd
+from sklearn.cluster import DBSCAN
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+# Source data set
+csv_path = 'data/caliper.csv'
+df = pd.read_csv(csv_path)
+print('')
+print(df.head())
+print('')
+print(df.tail())
+
+# Defining feature data set / feature matrix, X. 
+# Converting Pandas data frame to Numpy array to use library scikit-learn
+
+X = df[['r']].values.astype(float)
+X2 = df[['r', 'h']].values.astype(float)
+
+print('')
+print('Chosen feature matrix X:')
+print(X[0:5])
+print('')
+print(X.shape)
+print('')
+print('X type:',type(X))
+
+plt.figure(1)
+plt.scatter(X[:,0], X2[:,1])
+plt.title('Non-normalized data')
+plt.xlabel('Delta r')
+plt.ylabel('Depth h')
+
+# I. DBSCAN Modeling - non-normalized data
+epsilon = 0.5
+minSamples = 4
+db = DBSCAN (eps = epsilon, min_samples = minSamples).fit(X)
+labels_non_norm = db.labels_
+labels_non_norm
+
+# Plotting with detected number of standard clusters and noise cluster - non-normalized data
+plt.figure(2)
+plt.scatter(X[: , 0], X2[: , 1], 50, labels_non_norm,  alpha = 0.5)
+plt.title('DBSCAN on non-normalized data')
+plt.xlabel('Delta r')
+plt.ylabel('Depth h')
