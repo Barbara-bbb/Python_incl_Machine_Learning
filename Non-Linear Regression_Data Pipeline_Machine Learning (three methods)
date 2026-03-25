@@ -59,10 +59,9 @@ print(p)
 
 
 def PlotPolly (model, independent_variable, dependent_variable, Name):
-    x_new = np.arange (-10.0, 10.0, 0.8)
-    y_new = model (x_new)
+    y_pred = model (x)
     
-    plt.plot(independent_variable, dependent_variable,'.',x_new,y_new,'-')
+    plt.plot(independent_variable, dependent_variable,'.',x, y_pred,'-')
     plt.title('Non-linear regression / Polynomial Fit with Matplotlib')
     ax=plt.gca()
     ax.set_facecolor((0.898, 0.898, 0.898))
@@ -73,7 +72,7 @@ def PlotPolly (model, independent_variable, dependent_variable, Name):
     plt.close()
 
 PlotPolly(p, x, y_data, 'Independent variable x')
-np.polyfit(x,y_data,2)
+#np.polyfit(x,y_data,2)
 
 
 # 3. The same as in the two examples above, solved using Pipelines (Polynomial Regression) 
