@@ -1,4 +1,4 @@
-# Open https://jupyter.org/try-jupyter/lab/ using Google Chrome. Open Notebook with Python.
+# Open https://jupyter.org/try-jupyter/lab/ using Google Chrome. 
 # Create the following csv file in the data folder:
 
 dr,h
@@ -23,7 +23,7 @@ dr,h
 2.7,19
 5.1,20
 
-# Copy and paste the below code in a new Python Notebook: 
+# Copy and paste the below code in a new Python Notebook (in the main folder), and run the code. 
 # THE CODE
 
 print('')
