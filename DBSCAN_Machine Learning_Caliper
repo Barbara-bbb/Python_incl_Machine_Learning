@@ -28,8 +28,8 @@ print(df.tail())
 # Defining feature data set / feature matrix, X. 
 # Converting Pandas data frame to Numpy array to use library scikit-learn
 
-X = df[['r']].values.astype(float)
-X2 = df[['r', 'h']].values.astype(float)
+X = df[['dr']].values.astype(float)
+X2 = df[['dr', 'h']].values.astype(float)
 
 print('')
 print('Chosen feature matrix X:')
