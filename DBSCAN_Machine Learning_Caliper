@@ -23,7 +23,7 @@ dr,h
 2.7,19
 5.1,20
 
-
+# Copy and paste the below code in a new Python Notebook: 
 # THE CODE
 
 print('')
